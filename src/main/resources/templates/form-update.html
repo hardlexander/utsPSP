@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Update Dosen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </link>
+        
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    	<nav class="navbar navbar-inverse">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">Logo</a>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="/dosen/viewall">All Dosen</a></li>
+    			</ul>
+  			</div>
+		</nav>
+
+<div class="container">
+	<h1 class="page-header">Update Dosen</h1>
+
+	<form action="#" th:action="@{/dosen/update/submit}" th:object="${dosen}" method="post">
+		<div>
+			<label for="nomor_induk">Nomor Induk</label> <input type="text" class="form-control" name="nomor_induk" th:value="${dosen.nomor_induk}" th:field="*{nomor_induk}"/>
+		</div>
+		<div>
+			<label for="nomor_induk_nasional">Nomor Induk Nasional</label> <input type="text" class="form-control" name="nomor_induk_nasional" th:value="${dosen.nomor_induk_nasional}" th:field="*{nomor_induk_nasional}"/>
+		</div>
+		<div>
+			<label for="nama">Nama Dosen</label> <input type="text" class="form-control" name="nama" th:value="${dosen.nama}" th:field="*{nama}"/>
+		</div>
+		<div>
+			<label for="jenjang_pendidikan">Jenjang Pendidikan</label> <input type="text" class="form-control" name="jenjang_pendidikan" th:value="${dosen.jenjang_pendidikan}" th:field="*{jenjang_pendidikan}"/>
+		</div>
+		<div>
+			<label for="institusi_penempatan">Institusi Penempatan</label> <input type="text" class="form-control" name="institusi_penempatan" th:value="${dosen.institusi_penempatan}" th:field="*{institusi_penempatan}"/>
+		</div>
+		<div>
+			<label for="nomor_serdos">Nomor Serdos</label> <input type="text" class="form-control" name="nomor_serdos" th:value="${dosen.nomor_serdos}" th:field="*{nomor_serdos}"/>
+		</div>
+		<div>
+			<label for="gelar_depan">Gelar Depan</label> <input type="text" class="form-control" name="gelar_depan" th:value="${dosen.gelar_depan}" th:field="*{gelar_depan}"/>
+		</div>
+		<div>
+			<label for="gelar_belakang">Gelar Belakang</label> <input type="text" class="form-control" name="gelar_belakang" th:value="${dosen.gelar_belakang}" th:field="*{gelar_belakang}"/>
+		</div>
+		<div>
+			<label for="jabatan_akademik">Jabatan Akademik</label> <input type="text" class="form-control" name="jabatan_akademik" th:value="${dosen.jabatan_akademik}" th:field="*{jabatan_akademik}"/>
+		</div>
+		<div>
+			<label for="tahun_lulus">Tahun Lulus</label> <input type="text" class="form-control" name="tahun_lulus" th:value="${dosen.tahun_lulus}" th:field="*{tahun_lulus}"/>
+		</div>
+
+		<div>
+			<button type="submit" name="action" value="save">Simpan</button>
+		</div>
+	</form>
+</div>
+
+</body>
+
+</html>
+

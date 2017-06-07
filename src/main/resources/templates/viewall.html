@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Daftar Dosen</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </link>
+        
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    	<nav class="navbar navbar-inverse">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">Logo</a>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="/dosen/viewall">All Dosen</a></li>
+    			</ul>
+  			</div>
+		</nav>    
+		 
+
+        
+        
+		<div class="container">
+        	<h1 class="page-header">Daftar Dosen <a th:href="'/dosen/add/'" class="btn btn-default" > Dosen Baru </a>
+        	</h1>
+        	<div class="table-responsive">
+  				<table class="table">
+   				 <thead>
+     				 <tr>
+	        			<th>No.</th>
+        				<th>Nama Dosen</th>
+       					<th>No Induk</th>
+       					<th>No Induk Nasional</th>
+       					<th>Jabatan Akademik</th>
+       					<th>Aksi</th>
+     				 </tr>
+  				  </thead>
+   				  <tbody>
+      				<tr th:each="dosen,iterationStatus: ${allDosen}">
+					<td> <p th:text="'' + ${iterationStatus.count}">No. 1</p> </td>
+	     	  			<td> <a th:href="'/dosen/view/' + ${dosen.id}" th:text="${dosen.nama}">Nama Dosen</a> </td>
+	      	 			<td> <p th:text="${dosen.nomor_induk}">Nomor Induk</p> </td>
+	      	 			<td> <p th:text="${dosen.nomor_induk_nasional}">Nomor Induk Nasional</p> </td>
+	      	 			<td> <p th:text="${dosen.jabatan_akademik}">Jabatan Akademik</p> </td>
+	      	 			<td> <a th:href="'/dosen/update/' + ${dosen.id}"> Ubah </a> <a th:href="'/dosen/delete/' + ${dosen.id}"> Hapus </a></td>
+    				</tr>
+   				 </tbody>
+ 			 </table>
+			</div>
+    		<a th:href="'/dosen/add/'" class="btn btn-default" > Dosen Baru </a><br/>
+       	</div>
+    </body>
+</html>

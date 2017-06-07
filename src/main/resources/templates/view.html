@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Data Dosen</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </link>
+        
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    	<nav class="navbar navbar-inverse">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">Logo</a>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="/dosen/viewall">All Dosen</a></li>
+    			</ul>
+  			</div>
+		</nav>  
+		
+	<div class="container">
+    	<h1 class="page-header">Data Dosen </h1>
+    	
+       <div class="row">
+  			<div class="col-sm-4" th:text="'Nomor Induk'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.nomor_induk}">.col-sm-8</div>
+		</div>
+		<div class="row">
+  			<div class="col-sm-4" th:text="'Nama'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.nama}">.col-sm-8</div>
+		</div>
+		<div class="row">
+  			<div class="col-sm-4" th:text="'Institusi Penempatan'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.institusi_penempatan}">.col-sm-8</div>
+		</div>
+		<div class="row">
+  			<div class="col-sm-4" th:text="'Gelar Depan'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.gelar_depan}">.col-sm-8</div>
+		</div>	
+		<div class="row">
+  			<div class="col-sm-4" th:text="'Tahun Lulus'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.tahun_lulus}">.col-sm-8</div>
+		</div>		<div class="row">
+  			<div class="col-sm-4" th:text="'Nomor Induk Nasional'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.nomor_induk_nasional}">.col-sm-8</div>
+		</div>		<div class="row">
+  			<div class="col-sm-4" th:text="'Jenjang Pendidikan'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.jenjang_pendidikan}">.col-sm-8</div>
+		</div>		<div class="row">
+  			<div class="col-sm-4" th:text="'Nomor Serdos'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.nomor_serdos}">.col-sm-8</div>
+		</div>		<div class="row">
+  			<div class="col-sm-4" th:text="'Gelar Belakang'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.gelar_belakang}">.col-sm-8</div>
+		</div>		<div class="row">
+  			<div class="col-sm-4" th:text="'Jabatan Akademik'" >.col-sm-4</div>
+ 			<div class="col-sm-8" th:text="${dosen.jabatan_akademik}">.col-sm-8</div>
+		</div>
+
+       	</div>
+       	
+
+       	
+    </body>
+</html>
+
